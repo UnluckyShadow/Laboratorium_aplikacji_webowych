@@ -24,13 +24,13 @@
 		<label for="id_rate">Oprocentowanie (% rocznie): </label>
 		<input id="id_rate" type="text" name="rate" value="<?php out($rate) ?>" /><br />
 	</fieldset>
-	<input type="submit" value="Oblicz ratę" class="pure-button pure-button-primary" />
+	<input type="submit" value="Oblicz ratę" class="pure-button pure-button-primary" style="background-color: blue; color: white; padding: 10px 20px; border: rounded; border-radius: 5px; "  />
 </form> 
 
 <?php
 if (isset($messages)) {
 	if (count ( $messages ) > 0) {
-		echo '<ol style="margin: 20px; padding: 10px 10px 10px 30px; border-radius: 5px; background-color: #f88; width:300px;">';
+		echo '<ol style="margin: 20px; padding: 10px 10px 10px 30px; border: rounded; border-radius: 15px; background-color: #fc2121; width:300px;">';
 		foreach ( $messages as $key => $msg ) {
 			echo '<li>'.$msg.'</li>';
 		}
