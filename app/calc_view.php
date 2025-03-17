@@ -1,20 +1,30 @@
-<?php require_once dirname(__FILE__) .'/../config.php';?>
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
 <head>
-<meta charset="utf-8" />
-<title>Kalkulator kredytowy</title>
+	<meta charset="utf-8" />
+	<title>Kalkulator kredytowy</title>
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 </head>
 <body>
 
-<form action="<?php print(_APP_URL);?>/app/calc.php" method="post">
-	<label for="id_amount">Kwota kredytu: </label>
-	<input id="id_amount" type="text" name="amount" value="" /><br />
-	<label for="id_years">Liczba lat: </label>
-	<input id="id_years" type="text" name="years" value="" /><br />
-	<label for="id_rate">Oprocentowanie (% rocznie): </label>
-	<input id="id_rate" type="text" name="rate" value="" /><br />
-	<input type="submit" value="Oblicz ratę" />
+<div style="width:90%; margin: 2em auto;">
+	<a href="<?php print(_APP_ROOT); ?>/app/inna_chroniona.php" class="pure-button">kolejna chroniona strona</a>
+	<a href="<?php print(_APP_ROOT); ?>/app/security/logout.php" class="pure-button pure-button-active">Wyloguj</a>
+</div>
+
+<div style="width:90%; margin: 2em auto;">
+
+<form action="<?php print(_APP_ROOT); ?>/app/calc.php" method="post" class="pure-form pure-form-stacked">
+	<legend>Kalkulator Kredytowy</legend>
+	<fieldset>
+		<label for="id_amount">Kwota kredytu: </label>
+		<input id="id_amount" type="text" name="amount" value="<?php out($amount) ?>" /><br />
+		<label for="id_years">Liczba lat: </label>
+		<input id="id_years" type="text" name="years" value="<?php out($years) ?>" /><br />
+		<label for="id_rate">Oprocentowanie (% rocznie): </label>
+		<input id="id_rate" type="text" name="rate" value="<?php out($rate) ?>" /><br />
+	</fieldset>
+	<input type="submit" value="Oblicz ratę" class="pure-button pure-button-primary" />
 </form> 
 
 <?php
@@ -34,6 +44,6 @@ if (isset($messages)) {
 <?php echo 'Miesięczna rata: '.number_format($result, 2, ',', ' ').' PLN'; ?>
 </div>
 <?php } ?>
-
+</div>
 </body>
 </html>
