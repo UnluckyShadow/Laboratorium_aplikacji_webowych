@@ -1,4 +1,4 @@
-{extends file="../templates/main.html"}
+{extends file=$conf->root_path|cat:"/templates/main.html"}
 
 {block name=footer}przykładowa tresć stopki wpisana do szablonu głównego z szablonu kalkulatora{/block}
 
@@ -13,16 +13,16 @@
     </header>
     <div class="content style4 featured">
         <div class="container medium">
-            <form method="post" action="{$app_url}/app/calc.php">
+            <form method="post" action="{$conf->action_root}calcCompute">
                 <div class="row gtr-50">
                     <div class="col-4 col-12-mobile">
-                        <input type="text" name="amount" placeholder="Kwota" value="{$form['amount']}" />
+                        <input type="text" name="amount" placeholder="Kwota" value="{$form->amount}" />
                     </div>
                     <div class="col-4 col-12-mobile">
-                        <input type="text" name="years" placeholder="Liczba lat" value="{$form['years']}" />
+                        <input type="text" name="years" placeholder="Liczba lat" value="{$form->years}" />
                     </div>
                     <div class="col-4 col-12-mobile">
-                        <input type="text" name="rate" placeholder="Oprocentowanie" value="{$form['rate']}" />
+                        <input type="text" name="rate" placeholder="Oprocentowanie" value="{$form->rate}" />
                     </div>
                     <div class="col-12">
                         <ul class="actions special">
@@ -34,32 +34,36 @@
         </div>
     </div>
 
-    {if isset($messages) && count($messages) > 0}
+    {if $msgs->isError()}
         <div class="container medium error-messages">
             <h4>Wystąpiły błędy:</h4>
-            <ol>
-            {foreach $messages as $msg}
-                <li>{$msg}</li>
+            <ol class="err">
+            {foreach $msgs->getErrors() as $err}
+            {strip}
+                <li>{$err}</li>
+            {/strip}
             {/foreach}
             </ol>
         </div>
     {/if}
 
-    {if isset($infos) && count($infos) > 0}
+    {if $msgs->isInfo()}
         <div class="container medium info-messages">
             <h4>Informacje:</h4>
-            <ol>
-            {foreach $infos as $msg}
-                <li>{$msg}</li>
+            <ol class="inf">
+            {foreach $msgs->getInfos() as $inf}
+            {strip}
+                <li>{$inf}</li>
+            {/strip}
             {/foreach}
             </ol>
         </div>
     {/if}
 
-    {if isset($result)}
+    {if isset($res->result)}
         <div class="container medium result-message">
             <h4>Wynik</h4>
-            <p>Miesięczna rata: <strong>{$result|string_format:"%.2f"} zł</strong></p>
+            <p>Miesięczna rata: <strong>{$res->result|string_format:"%.2f"} zł</strong></p>
         </div>
     {/if}
 </section>

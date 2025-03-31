@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 5.4.2, created on 2025-03-31 12:04:44
-  from 'file:E:\Programy\xamp\htdocs\php_04_szablony_smarty\app\../templates/main.html' */
+/* Smarty version 5.4.2, created on 2025-03-31 12:16:13
+  from 'file:E:\Programy\xamp\htdocs\php_05_obiektowosc\app\../templates/main.html' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.2',
-  'unifunc' => 'content_67ea68bc90b0c1_20579700',
+  'unifunc' => 'content_67ea6b6d15f6d4_45487372',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '30fdb6c283e233d247461e3bbff5155211af1f32' => 
+    'd9a50106e5491e469ba499c2a0182a9e76f85425' => 
     array (
-      0 => 'E:\\Programy\\xamp\\htdocs\\php_04_szablony_smarty\\app\\../templates/main.html',
+      0 => 'E:\\Programy\\xamp\\htdocs\\php_05_obiektowosc\\app\\../templates/main.html',
       1 => 1742868428,
       2 => 'file',
     ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_67ea68bc90b0c1_20579700 (\Smarty\Template $_smarty_tpl) {
-$_smarty_current_dir = 'E:\\Programy\\xamp\\htdocs\\php_04_szablony_smarty\\templates';
+function content_67ea6b6d15f6d4_45487372 (\Smarty\Template $_smarty_tpl) {
+$_smarty_current_dir = 'E:\\Programy\\xamp\\htdocs\\php_05_obiektowosc\\templates';
 $_smarty_tpl->getInheritance()->init($_smarty_tpl, false);
 ?>
 <!DOCTYPE HTML>
@@ -48,7 +48,7 @@ $_smarty_tpl->getInheritance()->init($_smarty_tpl, false);
             </section>
 
             <?php 
-$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_134881805767ea68bc90a5b4_57035863', 'content');
+$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_75770025967ea6b6d15ec86_10036584', 'content');
 ?>
 
 
@@ -97,10 +97,10 @@ $_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_134881805767e
     </body>
 </html><?php }
 /* {block 'content'} */
-class Block_134881805767ea68bc90a5b4_57035863 extends \Smarty\Runtime\Block
+class Block_75770025967ea6b6d15ec86_10036584 extends \Smarty\Runtime\Block
 {
 public function callBlock(\Smarty\Template $_smarty_tpl) {
-$_smarty_current_dir = 'E:\\Programy\\xamp\\htdocs\\php_04_szablony_smarty\\templates';
+$_smarty_current_dir = 'E:\\Programy\\xamp\\htdocs\\php_05_obiektowosc\\templates';
 }
 }
 /* {/block 'content'} */

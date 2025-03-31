@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>{$page_title}</title>
+        <title>{$page_title|default:"Kalkulator Kredytowy"}</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="{$app_url}/css/main.css" />
@@ -15,11 +15,15 @@
                     <p>Witaj w kalkulatorze</p>
                 </header>
                 <footer>
-                    <a href="#fourth" class="button scrolly">Przejdź do kalkulatora</a>
+                    <a href="#app_content" class="button scrolly">Przejdź do kalkulatora</a>
                 </footer>
             </section>
 
-            {block name=content}{/block}
+            <div class="content-wrapper">
+                <div id="app_content" class="content">
+                    {block name=content}{/block}
+                </div>
+            </div>
 
         <!-- Footer -->
             <section id="footer">

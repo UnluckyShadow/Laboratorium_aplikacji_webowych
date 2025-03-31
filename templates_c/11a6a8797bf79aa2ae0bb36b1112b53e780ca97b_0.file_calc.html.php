@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 5.4.2, created on 2025-03-31 12:04:44
-  from 'file:E:\Programy\xamp\htdocs\php_04_szablony_smarty/app/calc.html' */
+/* Smarty version 5.4.2, created on 2025-03-31 12:14:27
+  from 'file:E:\Programy\xamp\htdocs\php_04_szablony_smartyy/app/calc.html' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.2',
-  'unifunc' => 'content_67ea68bc1a9ea3_75037298',
+  'unifunc' => 'content_67ea6b032159e1_74038828',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '652f08a554c6f358601a239ce912fcd9971ec7a4' => 
+    '11a6a8797bf79aa2ae0bb36b1112b53e780ca97b' => 
     array (
-      0 => 'E:\\Programy\\xamp\\htdocs\\php_04_szablony_smarty/app/calc.html',
+      0 => 'E:\\Programy\\xamp\\htdocs\\php_04_szablony_smartyy/app/calc.html',
       1 => 1742870126,
       2 => 'file',
     ),
@@ -20,36 +20,36 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_67ea68bc1a9ea3_75037298 (\Smarty\Template $_smarty_tpl) {
-$_smarty_current_dir = 'E:\\Programy\\xamp\\htdocs\\php_04_szablony_smarty\\app';
+function content_67ea6b032159e1_74038828 (\Smarty\Template $_smarty_tpl) {
+$_smarty_current_dir = 'E:\\Programy\\xamp\\htdocs\\php_04_szablony_smartyy\\app';
 $_smarty_tpl->getInheritance()->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_99645815967ea68bbe1a438_13477882', 'footer');
+$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_180440099867ea6b03171106_35366315', 'footer');
 ?>
 
 
 <?php 
-$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_77707034067ea68bbeaa4f0_27614569', 'content');
+$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_201645521767ea6b03175ed5_76343704', 'content');
 $_smarty_tpl->getInheritance()->endChild($_smarty_tpl, "../templates/main.html", $_smarty_current_dir);
 }
 /* {block 'footer'} */
-class Block_99645815967ea68bbe1a438_13477882 extends \Smarty\Runtime\Block
+class Block_180440099867ea6b03171106_35366315 extends \Smarty\Runtime\Block
 {
 public function callBlock(\Smarty\Template $_smarty_tpl) {
-$_smarty_current_dir = 'E:\\Programy\\xamp\\htdocs\\php_04_szablony_smarty\\app';
+$_smarty_current_dir = 'E:\\Programy\\xamp\\htdocs\\php_04_szablony_smartyy\\app';
 ?>
 przykładowa tresć stopki wpisana do szablonu głównego z szablonu kalkulatora<?php
 }
 }
 /* {/block 'footer'} */
 /* {block 'content'} */
-class Block_77707034067ea68bbeaa4f0_27614569 extends \Smarty\Runtime\Block
+class Block_201645521767ea6b03175ed5_76343704 extends \Smarty\Runtime\Block
 {
 public function callBlock(\Smarty\Template $_smarty_tpl) {
-$_smarty_current_dir = 'E:\\Programy\\xamp\\htdocs\\php_04_szablony_smarty\\app';
+$_smarty_current_dir = 'E:\\Programy\\xamp\\htdocs\\php_04_szablony_smartyy\\app';
 ?>
 
 

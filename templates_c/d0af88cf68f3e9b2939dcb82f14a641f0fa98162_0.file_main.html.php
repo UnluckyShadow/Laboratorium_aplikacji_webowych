@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.2, created on 2025-03-31 12:04:44
-  from 'file:E:\Programy\xamp\htdocs\php_04_szablony_smarty\app\../templates/main.html' */
+/* Smarty version 5.4.2, created on 2025-04-01 00:20:53
+  from 'file:E:\Programy\xamp\htdocs\php_05_obiektowosc/templates/main.html' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.2',
-  'unifunc' => 'content_67ea68bc90b0c1_20579700',
+  'unifunc' => 'content_67eb154523c6b9_14687142',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '30fdb6c283e233d247461e3bbff5155211af1f32' => 
+    'd0af88cf68f3e9b2939dcb82f14a641f0fa98162' => 
     array (
-      0 => 'E:\\Programy\\xamp\\htdocs\\php_04_szablony_smarty\\app\\../templates/main.html',
-      1 => 1742868428,
+      0 => 'E:\\Programy\\xamp\\htdocs\\php_05_obiektowosc/templates/main.html',
+      1 => 1743459537,
       2 => 'file',
     ),
   ),
@@ -20,14 +20,14 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_67ea68bc90b0c1_20579700 (\Smarty\Template $_smarty_tpl) {
-$_smarty_current_dir = 'E:\\Programy\\xamp\\htdocs\\php_04_szablony_smarty\\templates';
+function content_67eb154523c6b9_14687142 (\Smarty\Template $_smarty_tpl) {
+$_smarty_current_dir = 'E:\\Programy\\xamp\\htdocs\\php_05_obiektowosc\\templates';
 $_smarty_tpl->getInheritance()->init($_smarty_tpl, false);
 ?>
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title><?php echo $_smarty_tpl->getValue('page_title');?>
+        <title><?php echo (($tmp = $_smarty_tpl->getValue('page_title') ?? null)===null||$tmp==='' ? "Kalkulator Kredytowy" ?? null : $tmp);?>
 </title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -43,14 +43,18 @@ $_smarty_tpl->getInheritance()->init($_smarty_tpl, false);
                     <p>Witaj w kalkulatorze</p>
                 </header>
                 <footer>
-                    <a href="#fourth" class="button scrolly">Przejdź do kalkulatora</a>
+                    <a href="#app_content" class="button scrolly">Przejdź do kalkulatora</a>
                 </footer>
             </section>
 
-            <?php 
-$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_134881805767ea68bc90a5b4_57035863', 'content');
+            <div class="content-wrapper">
+                <div id="app_content" class="content">
+                    <?php 
+$_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_203002143167eb154523bc29_41973099', 'content');
 ?>
 
+                </div>
+            </div>
 
         <!-- Footer -->
             <section id="footer">
@@ -97,10 +101,10 @@ $_smarty_tpl->getInheritance()->instanceBlock($_smarty_tpl, 'Block_134881805767e
     </body>
 </html><?php }
 /* {block 'content'} */
-class Block_134881805767ea68bc90a5b4_57035863 extends \Smarty\Runtime\Block
+class Block_203002143167eb154523bc29_41973099 extends \Smarty\Runtime\Block
 {
 public function callBlock(\Smarty\Template $_smarty_tpl) {
-$_smarty_current_dir = 'E:\\Programy\\xamp\\htdocs\\php_04_szablony_smarty\\templates';
+$_smarty_current_dir = 'E:\\Programy\\xamp\\htdocs\\php_05_obiektowosc\\templates';
 }
 }
 /* {/block 'content'} */
