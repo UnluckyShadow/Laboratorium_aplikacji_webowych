@@ -1,6 +1,8 @@
 <?php
-require_once 'CalcForm.class.php';
-require_once 'CalcResult.class.php';
+
+namespace app\controllers;
+use app\forms\CalcForm;
+use app\transfer\CalcResult;
 
 /** Kontroler kalkulatora kredytowego */
 class CalcCtrl {
@@ -52,7 +54,7 @@ class CalcCtrl {
         return ! getMessages()->isError();
     }
     
-    public function process(){
+    public function action_calcCompute(){
 
         $this->getParams();
         
@@ -75,15 +77,20 @@ class CalcCtrl {
         
         $this->generateView();
     }
-    
-    public function generateView(){        
+
+    public function action_calcShow(){
+		getMessages()->addInfo('Witaj w kalkulatorze');
+		$this->generateView();
+	}
+
+    public function generateView(){   
+        getSmarty()->assign('user',unserialize($_SESSION['user']));
+        
 		getSmarty()->assign('page_title', 'Kalkulator kredytowy');
-		getSmarty()->assign('page_description', 'Profesjonalny kalkulator kredytowy');
-		getSmarty()->assign('page_header', 'Kalkulator kredytowy');
                 
 		getSmarty()->assign('form', $this->form);
 		getSmarty()->assign('res', $this->result);
         
-		getSmarty()->display('CalcView.html');
+		getSmarty()->display('CalcView.tpl');
     }
 }

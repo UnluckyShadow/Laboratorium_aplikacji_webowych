@@ -1,8 +1,12 @@
-{extends file="main.html"}
+{extends file="main.tpl"}
 
 {block name=footer}przykładowa tresć stopki wpisana do szablonu głównego z szablonu kalkulatora{/block}
 
 {block name=content}
+<div class="pure-menu pure-menu-horizontal bottom-margin">
+	<a href="{$conf->action_url}logout"  class="">wyloguj</a>
+	<span style="float:right;">użytkownik: {$user->login}, rola: {$user->role}</span>
+</div>
 
 <section id="fourth" class="main">
     <header>
@@ -34,31 +38,7 @@
         </div>
     </div>
 
-    {if $msgs->isError()}
-        <div class="container medium error-messages">
-            <h4>Wystąpiły błędy:</h4>
-            <ol class="err">
-            {foreach $msgs->getErrors() as $err}
-            {strip}
-                <li>{$err}</li>
-            {/strip}
-            {/foreach}
-            </ol>
-        </div>
-    {/if}
-
-    {if $msgs->isInfo()}
-        <div class="container medium info-messages">
-            <h4>Informacje:</h4>
-            <ol class="inf">
-            {foreach $msgs->getInfos() as $inf}
-            {strip}
-                <li>{$inf}</li>
-            {/strip}
-            {/foreach}
-            </ol>
-        </div>
-    {/if}
+    {include file='messages.tpl'}   
 
     {if isset($res->result)}
         <div class="container medium result-message">

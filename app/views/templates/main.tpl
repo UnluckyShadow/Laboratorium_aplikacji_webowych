@@ -15,16 +15,10 @@
                     <p>Witaj w kalkulatorze</p>
                 </header>
                 <footer>
-                    <a href="#app_content" class="button scrolly">Przejdź do kalkulatora</a>
+                    <a href="#login-form" class="button scrolly">Przejdź do kalkulatora</a>
                 </footer>
             </section>
-
-            <div class="content-wrapper">
-                <div id="app_content" class="content">
-                    {block name=content}{/block}
-                </div>
-            </div>
-
+                        {block name=content}{/block}
         <!-- Footer -->
             <section id="footer">
                 <ul class="icons">
