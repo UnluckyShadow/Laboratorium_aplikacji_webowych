@@ -3,6 +3,7 @@
 namespace app\controllers;
 use app\forms\CalcForm;
 use app\transfer\CalcResult;
+use Medoo\Medoo;
 
 /** Kontroler kalkulatora kredytowego */
 class CalcCtrl {
@@ -74,7 +75,34 @@ class CalcCtrl {
             
             getMessages()->addInfo('Wykonano obliczenia.');
         }
+        try {
+            $database = new Medoo([
+            // required
+            'database_type' => 'mysql',
+            'database_name' => 'kalk',
+            'server' => 'localhost',
+            'username' => 'root',
+            'password' => '',
+            'charset' => 'utf8',
+            'collation' => 'utf8_polish_ci',
+            'port' => 3306,
+            'option' => [
+            \PDO::ATTR_CASE => \PDO::CASE_NATURAL,
+            \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION
+            ]
+        ]);
         
+            $database->insert("wynik", [
+            "kwota" => $this->form->amount,
+            "lat" => $this->form->years,
+            "procent" => $this->form->rate,
+            "rata" => $this->result->result,
+            "data" => date("Y-m-d H:i:s")
+            ]);
+
+        } catch (\PDOException $ex) {
+            getMessages()->addError("DB Error: ".$ex->getMessage());
+        }
         $this->generateView();
     }
 
